@@ -36,14 +36,19 @@ body{
 }
 #logo{
     position: relative;
-    bottom: 47%;
+    bottom: 66%;
     border: 3px solid black;
     left: 3%;
     border-radius: 15px;
 }
+#pillai{
+    position: relative;
+    bottom: 108px;
+    left: 1174px;
+}
 #slogan{
     position: relative;
-    bottom: 78px;
+    bottom: 116px;
     left: 450px;
     font-size: 31px;
     color: #0058ff;
