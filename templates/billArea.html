@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management Software</title>
+</head>
+{% load static %}
+<link rel="stylesheet" href="{% static 'billArea.css' %}">
+<body>
+    <div class="menu">
+        <button id="bill_area" onclick="location.href='billArea.html'">Bill Area</button>
+        <button id="sellings" onclick="location.href='sellings.html'">Sellings</button>
+        <button id="stocks" onclick="location.href='stocks.html'">Stocks</button>
+    </div>
+    <div class="billArea">
+        <h1 id="billText">Bill</h1>
+        <div class="bill">
+            <p id="name">!! DSS Supermarket !!</p>
+            <p id="loc1">Kamothe</p>
+            <p id="loc2">Navi Mumbai</p>
+            <p id="dash1">----------------------------------------------------------------</p>                          
+            <table>
+                <thead>
+                    <tr>
+                        <th id="itm">Item</th>
+                        <th id="prc">Price</th>
+                        <th id="qty">Quantity</th>
+                        <th id="tot">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="item">{{ pname1 }}</td>
+                        <td id="price">{{ prc1 }}</td>
+                        <td id="quantity">{{ qty1 }}</td>
+                        <td id="total">{{ tot1 }}</td>
+                    </tr>
+                    <tr>
+                        <td id="item">{{ pname2 }}</td>
+                        <td id="price">{{ prc2 }}</td>
+                        <td id="quantity">{{ qty2 }}</td>
+                        <td id="total">{{ tot2 }}</td>
+                    </tr>
+                    <tr>
+                        <td id="item">{{ pname3 }}</td>
+                        <td id="price">{{ prc3 }}</td>
+                        <td id="quantity">{{ qty3 }}</td>
+                        <td id="total">{{ tot3 }}</td>
+                    </tr>
+                    <tr>
+                        <td id="item">{{ pname4 }}</td>
+                        <td id="price">{{ prc4 }}</td>
+                        <td id="quantity">{{ qty4 }}</td>
+                        <td id="total">{{ tot4 }}</td>
+                    </tr>
+                    <tr>
+                        <td id="item">{{ pname5 }}</td>
+                        <td id="price">{{ prc5 }}</td>
+                        <td id="quantity">{{ qty5 }}</td>
+                        <td id="total">{{ tot5 }}</td>
+                    </tr>
+                    <tr>
+                        <td id="item">{{ pname6 }}</td>
+                        <td id="price">{{ prc6 }}</td>
+                        <td id="quantity">{{ qty6 }}</td>
+                        <td id="total">{{ tot6 }}</td>
+                    </tr>
+                    <tr>
+                        <td id="item">{{ pname7 }}</td>
+                        <td id="price">{{ prc7 }}</td>
+                        <td id="quantity">{{ qty7 }}</td>
+                        <td id="total">{{ tot7 }}</td>
+                    </tr>
+                    <tr>
+                        <td id="item">{{ pname8 }}</td>
+                        <td id="price">{{ prc8 }}</td>
+                        <td id="quantity">{{ qty8 }}</td>
+                        <td id="total">{{ tot8 }}</td>
+                    </tr>
+                    <tr>
+                        <td id="item">{{ pname9 }}</td>
+                        <td id="price">{{ prc9 }}</td>
+                        <td id="quantity">{{ qty9 }}</td>
+                        <td id="total">{{ tot9 }}</td>
+                    </tr>
+                    <tr>
+                        <td id="item">{{ pname10 }}</td>
+                        <td id="price">{{ prc10 }}</td>
+                        <td id="quantity">{{ qty10 }}</td>
+                        <td id="total">{{ tot10 }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p id="dash2">----------------------------------------------------------------</p>  
+            <h1 style="font-size: 20px;margin-left: 33px;position: relative;bottom: 19px;right:12px">Total</h1>
+            <h1 style="font-size: 18px;position: relative;right: 28px;bottom: 52px;text-align: right;">{{total}}</h1>
+            <p id="dash3">----------------------------------------------------------------</p>  
+            <p style="text-align: center;position: relative;bottom: 10px;">Thank you for shopping with us!!</p>
+        </div>
+        <p id="dateText">Date:</p>
+        <input type="text" id="date" value={{date}}>
+        <div class="label">
+            <h1>Product</h1>
+            <h1>Price</h1>
+            <h1>Quantity</h1>
+        </div>
+        <div class="prdts">
+            <form method="POST">
+                {% csrf_token %}
+                <table>
+                    <tr>
+                        <td id="pd">
+                            <input type="text" id="inp1" name="prdt1" list="items">
+                            <datalist id="items">
+                                {%for item in items%}
+                                <option>{{item}}</option>
+                                {%endfor%}
+                            </datalist>
+                        </td>
+                        <td id="pr">
+                            <input type="number" id="inp2" name="prc1">
+                        </td>
+                        <td id="qt">
+                            <input type="number" id="inp3" name="qty1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="pd">
+                            <input type="text" id="inp1" name="prdt2" list="items">
+                            <datalist id="items">
+                                {%for item in items%}
+                                <option>{{item}}</option>
+                                {%endfor%}
+                            </datalist>
+                        </td>
+                        <td id="pr">
+                            <input type="number" id="inp2" name="prc2">
+                        </td>
+                        <td id="qt">
+                            <input type="number" id="inp3" name="qty2">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="pd">
+                            <input type="text" id="inp1" name="prdt3" list="items">
+                            <datalist id="items">
+                                {%for item in items%}
+                                <option>{{item}}</option>
+                                {%endfor%}
+                            </datalist>
+                        </td>
+                        <td id="pr">
+                            <input type="number" id="inp2" name="prc3">
+                        </td>
+                        <td id="qt">
+                            <input type="number" id="inp3" name="qty3">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="pd">
+                            <input type="text" id="inp1" name="prdt4" list="items">
+                            <datalist id="items">
+                                {%for item in items%}
+                                <option>{{item}}</option>
+                                {%endfor%}
+                            </datalist>
+                        </td>
+                        <td id="pr">
+                            <input type="number" id="inp2" name="prc4">
+                        </td>
+                        <td id="qt">
+                            <input type="number" id="inp3" name="qty4">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="pd">
+                            <input type="text" id="inp1" name="prdt5" list="items">
+                            <datalist id="items">
+                                {%for item in items%}
+                                <option>{{item}}</option>
+                                {%endfor%}
+                            </datalist>
+                        </td>
+                        <td id="pr">
+                            <input type="number" id="inp2" name="prc5">
+                        </td>
+                        <td id="qt">
+                            <input type="number" id="inp3" name="qty5">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="pd">
+                            <input type="text" id="inp1" name="prdt6" list="items">
+                            <datalist id="items">
+                                {%for item in items%}
+                                <option>{{item}}</option>
+                                {%endfor%}
+                            </datalist>
+                        </td>
+                        <td id="pr">
+                            <input type="number" id="inp2" name="prc6">
+                        </td>
+                        <td id="qt">
+                            <input type="number" id="inp3" name="qty6">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="pd">
+                            <input type="text" id="inp1" name="prdt7" list="items">
+                            <datalist id="items">
+                                {%for item in items%}
+                                <option>{{item}}</option>
+                                {%endfor%}
+                            </datalist>
+                        </td>
+                        <td id="pr">
+                            <input type="number" id="inp2" name="prc7">
+                        </td>
+                        <td id="qt">
+                            <input type="number" id="inp3" name="qty7">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="pd">
+                            <input type="text" id="inp1" name="prdt8" list="items">
+                            <datalist id="items">
+                                {%for item in items%}
+                                <option>{{item}}</option>
+                                {%endfor%}
+                            </datalist>
+                        </td>
+                        <td id="pr">
+                            <input type="number" id="inp2" name="prc8">
+                        </td>
+                        <td id="qt">
+                            <input type="number" id="inp3" name="qty8">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="pd">
+                            <input type="text" id="inp1" name="prdt9" list="items">
+                            <datalist id="items">
+                                {%for item in items%}
+                                <option>{{item}}</option>
+                                {%endfor%}
+                            </datalist>
+                        </td>
+                        <td id="pr">
+                            <input type="number" id="inp2" name="prc9">
+                        </td>
+                        <td id="qt">
+                            <input type="number" id="inp3" name="qty9">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="pd">
+                            <input type="text" id="inp1" name="prdt10" list="items">
+                            <datalist id="items">
+                                {%for item in items%}
+                                <option>{{item}}</option>
+                                {%endfor%}
+                            </datalist>
+                        </td>
+                        <td id="pr">
+                            <input type="number" id="inp2" name="prc10">
+                        </td>
+                        <td id="qt">
+                            <input type="number" id="inp3" name="qty10">
+                        </td>
+                    </tr>
+                    
+                </table>
+                <button id="billButton" type='submit'>Generate Bill</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

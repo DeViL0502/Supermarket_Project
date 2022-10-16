@@ -1,0 +1,146 @@
+*{
+    max-height: 98.4vh;
+}
+@font-face {
+    font-family: 'Lobster';
+    src: url("Lobster.ttf");
+}
+@font-face {
+    font-family: "Algerian";
+    src: url("Algerian.ttf");
+}
+.box{
+    width: 1030px;
+    height: 522px;
+    background-color: white;
+    position: relative;
+    border: 2px solid;
+    left: 239px;
+    bottom: 31px;
+    overflow-y: scroll;
+}
+#bg{
+    background-color: #f1f7bd;
+    border: 1px solid;
+    height: 94vh;
+}
+#head{
+    position: relative;
+    text-align: center;
+    top: 0px;
+    font-size: 44px;
+    font-family: "Algerian";
+    text-decoration: underline;
+}
+#bill_area{
+    background-color: white;
+    margin-bottom: 2px;
+}
+#sellings{
+    background-color: white;
+}
+#stocks{
+    background-color: white;
+}
+#bill_area:active{
+    transform: translateY(2px);
+    background-color: white;
+}
+#sellings:active{
+    transform: translateY(2px);
+    background-color: white;
+}
+#stocks:active{
+    transform: translateY(2px);
+    background-color: white;
+}
+#date{
+    padding-right: 64px;
+    padding-left: 54px;
+    position: relative;
+    bottom: 3px;
+    right: 3px;
+    font-size: 28px;
+    border: 2px solid;
+    padding-bottom: 6px;
+    text-align: center;
+}
+#itm{
+    position: relative;
+    bottom: 3px;
+    right: 7px;
+    font-size: 28px;
+    border: 2px solid;
+    text-align: center;
+}
+#prc{
+    padding-right: 46px;
+    padding-left: 52px;
+    position: relative;
+    bottom: 3px;
+    right: 11px;
+    font-size: 28px;
+    border: 2px solid;
+    text-align: center;
+}
+#qty{
+    padding-right: 38px;
+    padding-left: 58px;
+    position: relative;
+    bottom: 3px;
+    right: 15px;
+    font-size: 28px;
+    border: 2px solid;
+    text-align: center;
+}
+#tot{
+    padding-right: 83px;
+    padding-left: 95px;
+    position: relative;
+    bottom: 3px;
+    right: 19px;
+    font-size: 28px;
+    border: 2px solid;
+}
+#dt{
+    position: relative;
+    top: -6px;
+    right: 3px;
+    font-size: 28px;
+    padding-bottom: 10px;
+    border: 2px solid;
+    text-align: center;
+}
+#item{
+    position: relative;
+    top: -6px;
+    right: 7px;
+    font-size: 28px;
+    text-align: center;
+    border: 2px solid;
+    width: 215px;
+}
+#price{
+    position: relative;
+    top: -6px;
+    right: 11px;
+    font-size: 28px;
+    text-align: center;
+    border: 2px solid;
+}
+#quantity{
+    position: relative;
+    top: -6px;
+    right: 15px;
+    font-size: 28px;
+    text-align: center;
+    border: 2px solid;
+}
+#total{
+    position: relative;
+    top: -6px;
+    right: 19px;
+    font-size: 28px;
+    text-align: center;
+    border: 2px solid;
+}

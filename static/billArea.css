@@ -1,0 +1,239 @@
+@font-face {
+    font-family: 'Lobster';
+    src: url("Lobster.ttf");
+}
+@font-face {
+    font-family: "Algerian";
+    src: url("Algerian.ttf");
+}
+#bill_area{
+    background-color: white;
+    margin-bottom: 2px;
+}
+#sellings{
+    background-color: white;
+}
+#stocks{
+    background-color: white;
+}
+#bill_area:active{
+    transform: translateY(2px);
+    background-color: white;
+}
+#sellings:active{
+    transform: translateY(2px);
+    background-color: white;
+}
+#stocks:active{
+    transform: translateY(2px);
+    background-color: white;
+}
+.billArea{
+    width: 100%;
+    background-color: #f1f7bd;
+    height: 94vh;
+    border: 1px solid;
+}
+.bill{
+    width: 393px;
+    height: 600px;
+    border: 2px solid black;
+    margin-left: 72%;
+    margin-top: -4%;
+    background-color: white;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+#billText{
+    position: relative;
+    color: black;
+    font-size: 50px;
+    top: -28px;
+    left: 1253px;
+    width: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#date{
+    position: absolute;
+    top: 47px;
+    left: 534px;
+    font-size: 22px;
+    height: 30px;
+    background-color: white;
+    width: 165px;
+    height: 28px;
+}
+#dateText{
+    width: 20px;
+    position: absolute;
+    top: 15px;
+    left: 457px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+.label{
+    display: flex;
+    position: relative;
+    bottom: 599px;
+    left: 45px;
+    width: 90px;
+}
+.label h1{
+    padding-right: 100px;
+    border: 2px solid black;
+    padding-left: 100px;
+    background-color: white;
+}
+#name{
+    padding-left: 125px;
+    margin-top: 6px;
+}
+#loc1{
+    padding-left: 166px;
+    margin-top: -9px;
+}
+#loc2{
+    padding-left: 150px;
+    margin-top: -9px;
+}
+#dash1{
+    padding-left: 18px;
+    margin-top: -9px;
+}
+#dash2{
+    padding-left: 18px;
+    margin-top: -19px;
+}
+#dash3{
+    padding-left: 18px;
+    margin-top: -70px;
+}
+#itm{
+    padding-right: 64px;
+    padding-left: 29px;
+    position: relative;
+    bottom: 22px;
+    right: 15px;
+}
+#prc{
+    padding-right: 39px;
+    position: relative;
+    bottom: 22px;
+}
+#qty{
+    padding-right: 44px;
+    position: relative;
+    bottom: 22px;
+}
+#tot{
+    padding-right: 64px;
+    position: relative;
+    bottom: 22px;
+}
+#item{
+    position: relative;
+    bottom: 22px;
+    left: 15px;
+}
+#price{
+    padding-right: 39px;
+    position: relative;
+    bottom: 22px;
+    text-align: center;
+}
+#quantity{
+    padding-right: 44px;
+    position: relative;
+    bottom: 22px;
+    text-align: center;
+}
+#total{
+    padding-right: 64px;
+    position: relative;
+    bottom: 22px;
+    text-align: center;
+}
+.prdts{
+    position: absolute;
+    top: 166px;
+    left: 54px;
+    width: 1001px;
+    height: 500px;
+    border-top: 0px;
+}
+#pd{
+    width: 255px;
+    height: 30px;
+    background-color: white;
+    position: relative;
+    right: 1px;
+}
+#pr{
+    width: 208px;
+    height: 30px;
+    background-color: white;
+    position: relative;
+    right: -2px;
+    text-align: center;
+    font-size: 28px;
+}
+#qt{
+    width: 231px;
+    height: 30px;
+    background-color: white;
+    position: relative;
+    right: -4px;
+    text-align: center;
+    font-size: 28px;
+}
+#t{
+    width: 345px;
+    height: 30px;
+    background-color: white;
+    position: relative;
+    right: -6px;
+    text-align: center;
+    font-size: 28px;
+}
+#inp1{
+    width: 302px;
+    height: 40px;
+    border: 2px solid;
+    font-size: 28px;
+}
+#inp2{
+    width: 260px;
+    height: 40px;
+    border: 2px solid;
+    font-size: 28px;
+    text-align: center;
+}
+#inp3{
+    width: 315px;
+    height: 40px;
+    border: 2px solid;
+    font-size: 28px;
+    text-align: center;
+}
+#inp4{
+    width: 252px;
+    height: 40px;
+    border: 2px solid;
+    font-size: 28px;
+    text-align: center;
+}
+#billButton{
+    position: absolute;
+    background-color: aqua;
+    width: 148px;
+    height: 37px;
+    border-radius: 5px;
+    font-size: 19px;
+    top: 100.5%;
+    left: 38.5%;
+}
+
+
+
+
+

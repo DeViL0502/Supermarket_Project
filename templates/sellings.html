@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management Software</title>
+</head>
+{% load static %}
+<link rel="stylesheet" href="{% static 'sellings.css' %}">
+<body>
+    <div class="menu">
+        <button id="bill_area" onclick="location.href='billArea.html'">Bill Area</button>
+        <button id="sellings" onclick="location.href='sellings.html'">Sellings</button>
+        <button id="stocks" onclick="location.href='stocks.html'">Stocks</button>
+    </div>
+    <div id="bg">
+        <p id="head">Sellings</p>
+        <div class="box">
+            {% csrf_token %}
+            <table>
+                <thead>
+                    <tr>
+                        <th id="date">Date</th>
+                        <th id="itm">Item</th>
+                        <th id="prc">Price</th>
+                        <th id="qty">Quantity</th>
+                        <th id="tot">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {%for data in result%}
+                    <tr>
+                        <td id="dt">{{data.0}}</td>
+                        <td id="item">{{data.1}}</td>
+                        <td id="price">{{data.2}}</td>
+                        <td id="quantity">{{data.3}}</td>
+                        <td id="total">{{data.4}}</td>
+                    </tr>
+                    {%endfor%}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

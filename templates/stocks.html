@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management Software</title>
+</head>
+{% load static %}
+<link rel="stylesheet" href="{% static 'stocks.css' %}">
+<body>
+    <div class="menu">
+        <button id="bill_area" onclick="location.href='billArea.html'">Bill Area</button>
+        <button id="sellings" onclick="location.href='sellings.html'">Sellings</button>
+        <button id="stocks" onclick="location.href='stocks.html'">Stocks</button>
+    </div>
+    <div id="bg">
+        <p id="head">Stocks</p>
+        <div class="box">
+            {% csrf_token %}
+            <table>
+                <thead>
+                    <tr>
+                        <th id="date">Date</th>
+                        <th id="itm">Item</th>
+                        <th id="qty">Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {%for data in result%}
+                    <tr>
+                        <td id="dt">{{data.2}}</td>
+                        <td id="item">{{data.0}}</td>
+                        <td id="quantity">{{data.1}}</td>
+                    </tr>
+                    {%endfor%}
+                </tbody>
+            </table> 
+        </div>
+        <p id="head2">Update Stock</p>
+        <div class="box2">
+            <img src="{% static 'clg.png' %}" id="clg_img"></img>
+            <form method="POST">
+                {% csrf_token %}
+                <div>
+                    <label id="lpname">PRODUCT NAME</label><br>
+                    <input type="text" id="pname" name="pname" list="items"></input>
+                    <datalist id="items">
+                        {%for item in items%}
+                        <option>{{item}}</option>
+                        {%endfor%}
+                    </datalist>
+                </div>
+                <div>
+                    <label id="lpqty">QUANTITY</label><br>
+                    <input type="number" id="pqty" name="pqty"></input>
+                </div>
+                <button type="submit" id="btn">ADD ITEM</button>
+            </form>
+        </div> 
+    </div>
+</body>
+</html>
